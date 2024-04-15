@@ -1,4 +1,3 @@
-```markdown
 # Telegram Greeting and Farewell Bot
 
 A simple Telegram bot written in Python using the Telegram Bot API to greet new users upon joining a group and bid farewell to users when they leave the group.
@@ -21,7 +20,6 @@ This bot is designed to greet new users with a customizable message when they jo
 
    ```bash
    git clone https://github.com/your_username/telegram-greeting-farewell-bot.git
-   ```
 
 2. Install the required dependencies:
 
