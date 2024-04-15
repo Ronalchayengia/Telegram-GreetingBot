@@ -12,7 +12,6 @@ async def greet_new_user(update: Update, context: CallbackContext) -> None:
     new_user = update.message.new_chat_members[0]
     new_user_name = new_user.first_name
 
-    # Get the greeting message from the context
     bot_message = "Blip blop"
     greeting_message = context.chat_data.get("greeting_message", "welcome to")
  
@@ -24,20 +23,19 @@ async def goodbye(update: Update, context: CallbackContext) -> None:
     left_user = update.message.left_chat_member
     left_user_name = left_user.first_name
 
-    # Get the greeting message from the context
+    
     bot_message = "Goodbye"
     greeting_message = context.chat_data.get("greeting_message", "left the group")
 
-    # Send the greeting message to the chat
+    # Send the goodbye message to the chat
     await update.message.reply_text(f"{bot_message} , @{left_user_name}  {greeting_message} ")
        
     
 def main(): 
-    # Create the Updater with your bot token
+    # your bot token
     application = Application.builder().token("token here").build()
 
-    # Get the dispatcher to register handlers
-    # Add command handlers
+    
     # application.add_handler(MessageHandler(filters.TEXT& ~filters.COMMAND, echo))
     application.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, greet_new_user), group=1)
     application.add_handler(MessageHandler(filters.StatusUpdate.LEFT_CHAT_MEMBER, goodbye), group=1)
