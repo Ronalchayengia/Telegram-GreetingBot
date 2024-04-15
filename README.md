@@ -19,7 +19,7 @@ This bot is designed to greet new users with a customizable message when they jo
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Ronalchayengia/Telegram-GreetingBot.git
+   git clone https://github.com/spideyX99/Telegram-GreetingBot.git
    ```
 
 2. Install the required dependencies:
