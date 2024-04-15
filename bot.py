@@ -19,7 +19,7 @@ async def greet_new_user(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text(f"{bot_message} {greeting_message} {update.message.chat.title}, @{new_user_name}")
    
 async def goodbye(update: Update, context: CallbackContext) -> None:
-    # Get the new user's name
+    # Get the left user's name
     left_user = update.message.left_chat_member
     left_user_name = left_user.first_name
 
